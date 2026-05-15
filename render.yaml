@@ -1,0 +1,8 @@
+services:
+  - type: static_site
+    name: vcvsp-mvp
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - path: /*
+        destination: /index.html
